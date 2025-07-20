@@ -1,9 +1,38 @@
 import profileImg from "../../assets/profile.jpg";
+import sunderImg from "../../assets/sunder.jpg";
+import elonImg from "../../assets/elon.jpg";
+import markImg from "../../assets/mark.jpg";
+import reshiImg from "../../assets/reshi.jpg";
+import steveImg from "../../assets/steve.jpg";
+import abjImg from "../../assets/abj.jpg";
+import sathiyaImg from "../../assets/sathiya.jpg";
+import lisaImg from "../../assets/lisa.jpg";
+import jensenImg from "../../assets/jensen.jpg";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import ImageSlider from "../ImageSlider/ImageSlider";
 
+import { useEffect } from "react";
+
 function Home() {
+  useEffect(() => {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const rscrollers = document.querySelectorAll(".rscroller");
+      rscrollers.forEach((rscroller) => {
+        rscroller.setAttribute("data-animated", "true");
+
+        const rscrollerInner = rscroller.querySelector(".rscroller__inner");
+        const rscrollerContent = Array.from(rscrollerInner.children);
+
+        rscrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute("aria-hidden", "true");
+          rscrollerInner.appendChild(duplicatedItem);
+        });
+      });
+    }
+  }, []);
+
   return (
     <section className="home">
       <img src={profileImg} alt="Profile" className="profile-img" />
@@ -18,7 +47,7 @@ function Home() {
           <span className="hrole">Lifelong Learner</span>
         </div>
       </div>
-      <h1 className="fade-in">Vengatesh Ramar</h1>
+      <h1 className="myname fade-in">Vengatesh Ramar</h1>
       <p className="tagline fade-in">
         MERN Stack Developer | Passionate about Clean Code & Scalable Systems
       </p>
@@ -54,18 +83,105 @@ function Home() {
         <div className="card">
           <h3>🎓 Education</h3>
           <ul>
-            <li>MCA - Madurai Kamaraj University, 2023</li>
-            <li>BSc Computer Science - 2021</li>
-            <li>HSC - State Board, 2018</li>
+            <li>MCA - Madurai Kamaraj University</li>
+            <li>BSc Computer Science - Theni Kammavar College</li>
+            <li>HSC - State Board</li>
           </ul>
         </div>
 
         <div className="card">
-          <h3>🛠️ Skills</h3>
+          <h3>🌟 Interests</h3>
           <ul>
-            <li>JavaScript, React.js, Node.js</li>
-            <li>MongoDB, Express.js, Python</li>
-            <li>HTML5, CSS3, Bootstrap, Git</li>
+            <li>Building scalable web apps with clean architecture</li>
+            <li>Exploring AI integrations in full-stack development</li>
+            <li>Contributing to open-source and tech communities</li>
+          </ul>
+        </div>
+      </div>
+      <div className="skills-container fade-in">
+        <div className="scroller" data-animated="true">
+          <ul className="tag-list scroller__inner">
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+            <li>Python</li>
+            <li>Express.js</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Git & GitHub</li>
+            <li>REST APIs</li>
+            <li>Responsive Design</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
+      </div>
+      <div className="intro-container">
+        <h2>Meet Vengatesh</h2>
+        <p>
+          <span>
+            I'm Vengatesh — a kind, responsive, and dedicated developer. I value
+            clear communication, always listen carefully, and enjoy helping
+            others. Whether it’s coding or collaboration, I bring a calm,
+            supportive energy to every project I work on. I believe in
+            continuous learning and always strive to grow, both personally and
+            professionally. I’m passionate about writing clean code, building
+            user-friendly applications, and making a positive impact through
+            technology. I take pride in staying disciplined, working with
+            integrity, and staying committed to my goals.
+          </span>
+        </p>
+      </div>
+      <h2 className="role-models-title fade-in">My Role Models</h2>
+
+      <div className="rskills-container fade-in">
+        <div className="rscroller" data-animated="true">
+          <ul className="rtag-list rscroller__inner">
+            <li className="rcard">
+              <img src={sunderImg} alt="Sundar Pichai" />
+              <h4>Sundar Pichai</h4>
+              <p>CEO, Google</p>
+            </li>
+            <li className="rcard">
+              <img src={elonImg} alt="Elon Musk" />
+              <h4>Elon Musk</h4>
+              <p>CEO, Tesla & SpaceX</p>
+            </li>
+            <li className="rcard">
+              <img src={markImg} alt="Mark Zuckerberg" />
+              <h4>Mark Zuckerberg</h4>
+              <p>CEO, Meta</p>
+            </li>
+            <li className="rcard">
+              <img src={reshiImg} alt="Rishi Sunak" />
+              <h4>Rishi Sunak</h4>
+              <p>Prime Minister, UK</p>
+            </li>
+            <li className="rcard">
+              <img src={steveImg} alt="Steve Jobs" />
+              <h4>Steve Jobs</h4>
+              <p>Co-Founder, Apple</p>
+            </li>
+            <li className="rcard">
+              <img src={abjImg} alt="APJ Abdul Kalam" />
+              <h4>Dr. Kalam</h4>
+              <p>Scientist & President</p>
+            </li>
+            <li className="rcard">
+              <img src={sathiyaImg} alt="Satya Nadella" />
+              <h4>Satya Nadella</h4>
+              <p>CEO, Microsoft</p>
+            </li>
+            <li className="rcard">
+              <img src={lisaImg} alt="Lisa Su" />
+              <h4>Lisa Su</h4>
+              <p>CEO, AMD</p>
+            </li>
+            <li className="rcard">
+              <img src={jensenImg} alt="Jensen Huang" />
+              <h4>Jensen Huang</h4>
+              <p>CEO, NVIDIA</p>
+            </li>
           </ul>
         </div>
       </div>
