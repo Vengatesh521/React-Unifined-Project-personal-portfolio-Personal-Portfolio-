@@ -14,25 +14,26 @@ import ImageSlider from "../ImageSlider/ImageSlider";
 
 import { useEffect } from "react";
 
-function Home() {
-  useEffect(() => {
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const rscrollers = document.querySelectorAll(".rscroller");
-      rscrollers.forEach((rscroller) => {
-        rscroller.setAttribute("data-animated", "true");
+// Inside the Home component
+useEffect(() => {
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const rscrollers = document.querySelectorAll(".rscroller");
+    rscrollers.forEach((rscroller) => {
+      rscroller.setAttribute("data-animated", "true");
 
-        const rscrollerInner = rscroller.querySelector(".rscroller__inner");
-        const rscrollerContent = Array.from(rscrollerInner.children);
+      const rscrollerInner = rscroller.querySelector(".rscroller__inner");
+      const rscrollerContent = Array.from(rscrollerInner.children);
 
-        rscrollerContent.forEach((item) => {
-          const duplicatedItem = item.cloneNode(true);
-          duplicatedItem.setAttribute("aria-hidden", "true");
-          rscrollerInner.appendChild(duplicatedItem);
-        });
+      rscrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", "true");
+        rscrollerInner.appendChild(duplicatedItem);
       });
-    }
-  }, []);
+    });
+  }
+}, []);
 
+function Home() {
   return (
     <section className="home">
       <img src={profileImg} alt="Profile" className="profile-img" />
