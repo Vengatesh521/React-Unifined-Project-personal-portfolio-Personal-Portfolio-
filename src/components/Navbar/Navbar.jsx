@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import profileImg from "../../assets/profile.jpg";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
@@ -27,7 +28,16 @@ function Navbar() {
   return (
     <>
       <nav className="navbar-container">
-        <div className="navbar-logo">MyPortfolio</div>
+        <Link to="/" className="navbar-logo">
+          {activeSection === "about" ? (
+            <span className="logo-about">
+              <img src={profileImg} alt="Profile" className="nav-profile-img" />
+              R Vengatesh
+            </span>
+          ) : (
+            "MyPortfolio"
+          )}
+        </Link>
         <div className="text-changer">
           <p className="intro-text">I am a</p>
           <div className="roles-container">
@@ -56,7 +66,6 @@ function Navbar() {
             />
           </svg>
         </button>
-
         <ul className={`navbar-links ${isMenuOpen ? "show-menu" : ""}`}>
           {navItems.map((item) => (
             <li key={item.name} className="navbar-item">

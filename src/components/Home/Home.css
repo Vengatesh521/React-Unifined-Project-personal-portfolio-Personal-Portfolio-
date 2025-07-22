@@ -161,21 +161,21 @@
 .resume-btn {
   border: none;
   outline: none;
-  background-color: #2ecc71;
+  background-color: #195b22b6;
 }
 
 .resume-btn::before {
   content: "";
   background: linear-gradient(
     45deg,
-    #ff0000,
+    #01ff4d,
     #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #ff00c8,
-    #ff0000
+    #27f178,
+    #1ac19a,
+    #0695bd,
+    #5ad122,
+    #d35eb9,
+    #30a3c2
   );
   position: absolute;
   top: -2px;
@@ -368,6 +368,12 @@ slider-section {
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   height: 50px;
+  cursor: pointer;
+}
+
+.tag-list li:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px #6ce7f7;
 }
 
 .scroller {
@@ -532,7 +538,7 @@ slider-section {
 .rscroller[data-animated="true"] .rscroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: rscroll 5s linear infinite;
+  animation: rscroll 50s linear infinite;
 }
 
 @keyframes rscroll {
@@ -557,4 +563,19 @@ slider-section {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 0.1s;
+}
+.like-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.like-container p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #444;
 }

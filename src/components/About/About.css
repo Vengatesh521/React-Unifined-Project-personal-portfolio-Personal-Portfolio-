@@ -1,19 +1,46 @@
-#about {
-  background-color: white;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.about-section {
+  padding: 3rem 1.5rem;
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
   color: #2c3e50;
 }
 
-#about p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+.about-section-heading {
+  padding-top: 3rem;
+  font-size: 2.4rem;
+  color: #2c3e50;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 0.5rem;
+  line-height: 1.7;
+  font-family: "Nunito Sans", "Segoe UI", "Arial", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+
+  color: #333;
+}
+
+/* Fade-in animation (can reuse Home’s one) */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

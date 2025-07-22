@@ -11,29 +11,28 @@ import jensenImg from "../../assets/jensen.jpg";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import ImageSlider from "../ImageSlider/ImageSlider";
+import LikeButton from "../LikeButton/LikeButton";
 
-import { useEffect } from "react";
-
-// Inside the Home component
-useEffect(() => {
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const rscrollers = document.querySelectorAll(".rscroller");
-    rscrollers.forEach((rscroller) => {
-      rscroller.setAttribute("data-animated", "true");
-
-      const rscrollerInner = rscroller.querySelector(".rscroller__inner");
-      const rscrollerContent = Array.from(rscrollerInner.children);
-
-      rscrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        duplicatedItem.setAttribute("aria-hidden", "true");
-        rscrollerInner.appendChild(duplicatedItem);
-      });
-    });
-  }
-}, []);
+import { useEffect, useState } from "react";
 
 function Home() {
+  useEffect(() => {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const rscrollers = document.querySelectorAll(".rscroller");
+      rscrollers.forEach((rscroller) => {
+        rscroller.setAttribute("data-animated", "true");
+
+        const rscrollerInner = rscroller.querySelector(".rscroller__inner");
+        const rscrollerContent = Array.from(rscrollerInner.children);
+
+        rscrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute("aria-hidden", "true");
+          rscrollerInner.appendChild(duplicatedItem);
+        });
+      });
+    }
+  }, []);
   return (
     <section className="home">
       <img src={profileImg} alt="Profile" className="profile-img" />
@@ -188,12 +187,21 @@ function Home() {
       </div>
 
       <div className="home-buttons fade-in">
-        <a href="/resume.pdf" target="_blank" className="resume-btn">
-          Download Resume
+        <a
+          href="https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/ccbp_prod/media/resume_generated/Vengatesh_2025-06-16-184136.pdf"
+          target="_blank"
+          className="resume-btn"
+        >
+          Resume
         </a>
         <Link to="/contact" className="contact-btn">
           Contact Me
         </Link>
+      </div>
+
+      <div className="like-container">
+        <p>If you like this page, click the button below ❤️</p>
+        <LikeButton />
       </div>
     </section>
   );
