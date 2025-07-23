@@ -128,7 +128,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .project-info-top {
     flex-direction: column;
   }
@@ -141,6 +141,12 @@
   }
   .highlight {
     display: none;
+  }
+  .phighlight {
+    display: none;
+  }
+  .project-info ::before {
+    height: 900px;
   }
 }
 
@@ -169,7 +175,7 @@
 
   padding: 2rem;
   border-radius: 12px;
-  height: 350px;
+  height: 250px;
   color: #151c24;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08); /* deeper shadow */
   backdrop-filter: blur(8px); /* enhanced glass effect */
@@ -241,6 +247,16 @@
 .project-info-text:hover {
   color: #e0f7fa; /* subtle color change on hover */
 }
+@media (max-width: 400px) {
+  .project-info {
+    height: 300px;
+  }
+}
+@media (min-width: 400px) {
+  .project-info {
+    height: 250px;
+  }
+}
 
 .highlight {
   font-weight: 600;
@@ -270,6 +286,34 @@
   transform: scaleX(1); /* animate underline on hover */
   transform-origin: left;
 }
+.highlight-head {
+  font-weight: 600;
+  color: #12181d; /* vibrant gold for strong tags */
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.highlight-head::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #ffe1002f,
+    #0066ff
+  ); /* gradient underline */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.highlight-head:hover::after {
+  transform: scaleX(1); /* animate underline on hover */
+  transform-origin: left;
+}
 
 .project-profile-img {
   border-radius: 50%;
@@ -291,22 +335,82 @@
   box-shadow: 0 0 20px #ffd1dc;
 }
 
-.skills-certification-container {
+.phroles-container {
+  height: 24px;
+  overflow: hidden;
+  position: relative;
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  transition: color 0.3s ease-in-out;
 }
 
-.skill-card,
-.certification-card {
-  flex: 1;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.phroles-container:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 5px #ffd1dc;
+  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.phrole {
+  animation: hslideRoles 12s infinite;
+  white-space: nowrap;
+  color: aqua;
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.projects-names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phighlight {
+  font-weight: 600;
+  color: #12181d; /* vibrant gold for strong tags */
+  position: relative;
+  padding-bottom: 3px;
+  padding: 3px;
+}
+
+.phighlight::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #00ffb7,
+    #0066ff
+  ); /* gradient underline */
+  transform: scaleX(0);
+  transform-origin: right;
   transition: transform 0.3s ease;
 }
 
-.skill-card:hover,
+.phighlight:hover::after {
+  transform: scaleX(1); /* animate underline on hover */
+  transform-origin: left;
+}
+
+.skills-certification-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.certification-card {
+  flex: 1;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.781);
+  transition: transform 0.3s ease;
+  background: linear-gradient(to right, #8417b71d, #b274fe27, #0e86ef50);
+}
+
 .certification-card:hover {
   transform: translateY(-5px);
 }
@@ -343,13 +447,24 @@
 .project-card h3 {
   padding: 1rem;
   margin: 0;
-  background: #f0f0f0;
+  background: linear-gradient(to right, #48f677c3, #6c0de027, #ef640e50);
 }
 
 .project-card p {
   padding: 0 1rem 1rem;
   margin: 0;
-  color: #666;
+  color: #666666;
+  background: linear-gradient(to right, #48f677c3, #6c0de027, #0e86ef50);
+}
+
+.project-certification-p {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.project-certification-p:hover {
+  color: #e0f7fa; /* subtle color change on hover */
 }
 
 @media (max-width: 768px) {
