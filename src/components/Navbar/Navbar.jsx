@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import profileImg from "../../assets/profile.jpg";
+import profileImg from "../../assets/profile..JPG";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("home");

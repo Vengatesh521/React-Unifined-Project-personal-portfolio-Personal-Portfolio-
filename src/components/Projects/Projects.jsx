@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Projects.css";
-import profileImg from "../../assets/profile.jpg";
+import profileImg from "../../assets/profile.JPG";
 import image1 from "../../assets/image1.png";
 import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
