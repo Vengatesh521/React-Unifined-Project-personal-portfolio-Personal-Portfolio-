@@ -16,7 +16,7 @@
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.about-section p {
+.about-p {
   font-size: 1.1rem;
   max-width: 800px;
   margin: 0 auto 0.5rem;
@@ -24,11 +24,10 @@
   font-family: "Nunito Sans", "Segoe UI", "Arial", sans-serif;
   font-weight: 400;
   letter-spacing: 0.2px;
-
   color: #333;
 }
 
-/* Fade-in animation (can reuse Home’s one) */
+/* Fade-in animation */
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
@@ -62,4 +61,99 @@
 .email-link:hover {
   color: #0056b3;
   text-decoration: underline;
+}
+
+/* Social Links Styles */
+.social-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.social-links h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.social-links-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-link i {
+  font-size: 1.2rem;
+}
+
+.social-link.github {
+  background-color: #333;
+}
+
+.social-link.linkedin {
+  background-color: #0077b5;
+}
+
+.social-link.twitter {
+  background-color: #1da1f2;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section-heading {
+    font-size: 2rem;
+  }
+
+  .about-p {
+    font-size: 1rem;
+  }
+
+  .social-links-list {
+    gap: 1rem;
+  }
+
+  .social-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .social-link i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .social-links-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-link {
+    width: 80%;
+    justify-content: center;
+  }
 }

@@ -1,5 +1,11 @@
 import React from "react";
 import "./About.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 function About() {
   return (
@@ -80,6 +86,44 @@ function About() {
               vinex521@gmail.com
             </a>
           </p>
+        </div>
+        <div className="social-links">
+          <h3>Connect with me:</h3>
+          <ul className="social-links-list">
+            <li>
+              <a
+                href="https://github.com/Vengatesh521"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link github"
+              >
+                <i className="fab fa-github"></i>
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/vengatesh-ramar-5988152a7/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link linkedin"
+              >
+                <i className="fab fa-linkedin"></i>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link twitter"
+              >
+                <i className="fab fa-twitter"></i>
+                Twitter
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
