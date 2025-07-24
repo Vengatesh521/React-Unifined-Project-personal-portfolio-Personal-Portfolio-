@@ -65,27 +65,17 @@ function Home() {
         <div className="slider-section fade-in">
           <ImageSlider />
         </div>
-        <div className="slider-section fade-in">
-          <ImageSlider />
-        </div>
-        <div className="slider-section fade-in">
-          <ImageSlider />
-        </div>
-        <div className="slider-section fade-in">
-          <ImageSlider />
-        </div>
-        <div className="slider-section fade-in">
-          <ImageSlider />
-        </div>
       </div>
 
       <div className="info-cards fade-in">
         <div className="card">
-          <h3>🎓 Education</h3>
+          <h3>🎯 Hobbies</h3>
           <ul>
-            <li>MCA - Madurai Kamaraj University</li>
-            <li>BSc Computer Science - Theni Kammavar College</li>
-            <li>HSC - State Board</li>
+            <li>Exploring AI and Tech Innovations</li>
+            <li>Reading Space Science Articles</li>
+            <li>Teaching and Sharing Knowledge</li>
+
+            <li>Creative Writing & Public Speaking</li>
           </ul>
         </div>
 
@@ -101,18 +91,114 @@ function Home() {
       <div className="skills-container fade-in">
         <div className="scroller" data-animated="true">
           <ul className="tag-list scroller__inner">
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>MongoDB</li>
-            <li>Python</li>
-            <li>Express.js</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>Git & GitHub</li>
-            <li>REST APIs</li>
-            <li>Responsive Design</li>
-            <li>Bootstrap</li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/javascript-essentials?id=UZJMZAUUVO"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                JavaScript
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/react-js?id=AJSJFBKXQZ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                React
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/node-js?id=DQNMXDXQXL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Node.js
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/introduction-to-databases?id=HEZWLVXQYU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MongoDB
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/programming-foundations?id=TUORKEYWJI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                python
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/node-js?id=DQNMXDXQXL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Express.js
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/dynamic-web-application?id=XSDWVHIBUC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                HTML5
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/static-website?id=GFGXYQKAEL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CSS3
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/developer-foundations?id=CNQYULTYBK"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Git & GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/node-js?id=DQNMXDXQXL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                REST APIs
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/responsive-website?id=XETGUPGHFV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Responsive Design
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://certificates.ccbp.in/intensive/responsive-website?id=XETGUPGHFV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Bootstrap
+              </a>
+            </li>
           </ul>
         </div>
       </div>

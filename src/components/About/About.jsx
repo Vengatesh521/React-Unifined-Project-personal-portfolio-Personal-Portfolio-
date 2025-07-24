@@ -73,6 +73,14 @@ function About() {
           </p>
           <p className="education-year">2014 - 2015</p>
         </div>
+        <div className="contact-email">
+          <p>
+            📧 Email:{" "}
+            <a href="mailto:vinex521@gmail.com" className="email-link">
+              vinex521@gmail.com
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

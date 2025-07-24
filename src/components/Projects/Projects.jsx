@@ -2,6 +2,21 @@ import React, { useState } from "react";
 import "./Projects.css";
 import profileImg from "../../assets/profile.jpg";
 import image1 from "../../assets/image1.png";
+import image2 from "../../assets/image2.png";
+import image3 from "../../assets/image3.png";
+import image4 from "../../assets/image4.png";
+import image5 from "../../assets/image5.png";
+import image6 from "../../assets/image6.png";
+import image7 from "../../assets/image7.png";
+import image8 from "../../assets/image8.png";
+import image9 from "../../assets/image9.png";
+import image10 from "../../assets/image10.png";
+import image11 from "../../assets/image11.png";
+import image12 from "../../assets/image12.png";
+import image13 from "../../assets/image13.png";
+import image14 from "../../assets/image14.png";
+import image15 from "../../assets/image15.png";
+import image16 from "../../assets/image16.png";
 
 import { Link } from "react-router-dom";
 
@@ -17,152 +32,96 @@ function Projects() {
     {
       title: "Personal Portfolio",
       description: "React Unified personal portfolio project.",
+      image: image2,
+
       href: "https://github.com/Vengatesh521/React-Unifined-Project-personal-portfolio-Personal-Portfolio-",
     },
     {
       title: "Catering Reservation and Ordering System",
       description: "MERN Stack Catering System [Unified].",
       href: "https://github.com/Vengatesh521/Catering-Reservation-and-Ordering-System",
+      image: image3,
     },
-    {
-      title: "Student-Teacher Booking Appointment",
-      description: "Full Stack Student-Teacher Booking Appointment.",
-      href: "https://github.com/Vengatesh521/Full-Stack-Student-Teacher-Booking-Appointment",
-    },
+
     {
       title: "Swift Dashboard Company Project",
       description: "React swift-dashboard company project.",
       href: "https://github.com/Vengatesh521/React-swift-dashboard-Company-project",
-    },
-    {
-      title: "Major Web Project",
-      description: "Unified Fullstack major project.",
-      href: "https://github.com/Vengatesh521/Build-Web-Full-ven-major-project",
-    },
-    {
-      title: "Upload File with Multer",
-      description: "Upload files in Node.js using multer.",
-      href: "https://github.com/Vengatesh521/Node-Upload-file-in-nodejs-with-multer",
-    },
-    {
-      title: "Node URL Shortener",
-      description: "URL shortener app using Node.js.",
-      href: "https://github.com/Vengatesh521/Node-URL-shortener",
-    },
-    {
-      title: "Node TypeScript Company Project",
-      description: "Node project with TypeScript.",
-      href: "https://github.com/Vengatesh521/Node-ts-Company-project-swift",
+      image: image4,
     },
     {
       title: "Travel Trip App",
       description: "React Travel Trip App.",
       href: "https://github.com/Vengatesh521/React-Travel-Trip",
+      image: image5,
     },
     {
       title: "Jobby App (Old)",
       description: "React Jobby App.",
       href: "https://github.com/Vengatesh521/React-Jobby-app",
+      image: image6,
     },
     {
       title: "Simple Todos",
       description: "React Simple Todos (NEXTWAVE Coding Practice).",
       href: "https://github.com/Vengatesh521/React-Simple-Todos",
+      image: image7,
     },
     {
       title: "Nxt Trendz Cart Features",
       description: "Nxt Trendz enhancement with cart and payment.",
       href: "https://github.com/Vengatesh521/React-Nxt-Trendz---Cart-Features",
+      image: image8,
     },
-    {
-      title: "Vite Simple Todos",
-      description: "Vite + React Simple Todos app.",
-      href: "https://github.com/Vengatesh521/Vite-React-Simple-Todos",
-    },
-    {
-      title: "Vite Nxt Trendz",
-      description: "Vite + React Nxt Trendz Cart Features.",
-      href: "https://github.com/Vengatesh521/Vite-React-Nxt-Trendz---Cart-Features",
-    },
-    {
-      title: "Vite Jobby App",
-      description: "Vite + React Jobby App.",
-      href: "https://github.com/Vengatesh521/Vite-React-Jobby-app",
-    },
+
     {
       title: "Vite Movie Database App",
       description: "Movie database app using Vite + React.",
       href: "https://github.com/Vengatesh521/Vite-React-Movie-Database-App",
+      image: image9,
     },
-    {
-      title: "Nxt Watch App",
-      description: "Nxt Watch app using React.",
-      href: "https://github.com/Vengatesh521/React-NxtWatchApp",
-    },
-    {
-      title: "Movie Database App",
-      description: "NEXTWAVE Movie Database App.",
-      href: "https://github.com/Vengatesh521/React-Movie-Database-App",
-    },
-    {
-      title: "IPL Dashboard App",
-      description: "NEXTWAVE IPL Dashboard Enhancement.",
-      href: "https://github.com/Vengatesh521/React-IPL-Dashboard-App",
-    },
-    {
-      title: "Restaurant App",
-      description: "React Restaurant App.",
-      href: "https://github.com/Vengatesh521/React-Restaurant-App",
-    },
-    {
-      title: "Meetup App",
-      description: "Mock Interview Test - Meetup App.",
-      href: "https://github.com/Vengatesh521/React-Meetup",
-    },
+
     {
       title: "Company Assignment Template",
       description: "NEXTWAVE Company Assignment Template.",
       href: "https://github.com/Vengatesh521/React-Company-Assignment-Template",
+      image: image10,
     },
     {
       title: "Notes App (Hooks)",
       description: "React Notes App with Hooks.",
       href: "https://github.com/Vengatesh521/React-Notes-App-Hooks",
+      image: image11,
     },
     {
       title: "Read More / Less App",
       description: "NEXTWAVE Coding Practice 4.",
       href: "https://github.com/Vengatesh521/React-Read-More-Less",
+      image: image12,
     },
     {
       title: "Credit Card UI",
       description: "NEXTWAVE Coding Practice 3 - Credit Card UI.",
       href: "https://github.com/Vengatesh521/React-Credit-Card",
+      image: image13,
     },
     {
       title: "Password Validator",
       description: "NEXTWAVE Coding Practice 2 - Password Validator.",
       href: "https://github.com/Vengatesh521/React-Password-Validator",
-    },
-    {
-      title: "Vegetable Data Entry System",
-      description: "Django-based system for tracking purchases for retailers.",
-      href: "https://github.com/Vengatesh521/-Vegetable-Data-Entry-System---A-Django-Solution-for-Retailers-",
+      image: image14,
     },
     {
       title: "Unlock Lock App",
       description: "React app using hooks - Unlock / Lock UI.",
       href: "https://github.com/Vengatesh521/React-Unlock-Lock-App",
+      image: image15,
     },
     {
       title: "Text Editor App",
       description: "NEXTWAVE Interview Mock Test - Text Editor.",
       href: "https://github.com/Vengatesh521/React-Text-Editor",
-    },
-    {
-      title: "Gradient Generator",
-      description: "NEXTWAVE Coding Practice - Gradient Generator.",
-      href: "https://github.com/Vengatesh521/React-Gradient-Generator",
+      image: image16,
     },
   ]);
 
@@ -325,8 +284,33 @@ function Projects() {
         </div>
       </div>
 
+      <h1 className="highlight-head">Typing Skills</h1>
+
+      <div className="skills-certification-container">
+        <div className="certification-card">
+          <a
+            href="https://drive.google.com/file/d/1gVPPOeR2qXv1719uxIJAi_kVEPt94ddX/view?usp=sharing"
+            className="skill-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p className="project-certification-p">Tamil</p>
+          </a>
+        </div>
+        <div className="certification-card">
+          <a
+            href="https://drive.google.com/file/d/1fofCGBMpmUvTzKTHsls02OssjuTedc60/view?usp=sharing"
+            className="skill-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p className="project-certification-p">English</p>
+          </a>
+        </div>{" "}
+      </div>
+
       <div className="projects-section">
-        <h2>Highlighted Projects</h2>
+        <h2 className="highlight-head">Highlighted Projects</h2>
         <div className="project-grid">
           {projects.map((project, index) => (
             <a

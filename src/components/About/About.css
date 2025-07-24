@@ -44,3 +44,22 @@
     transform: scale(1);
   }
 }
+
+.contact-email {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #222;
+}
+
+.email-link {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}

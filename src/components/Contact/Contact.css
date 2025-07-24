@@ -1,49 +1,78 @@
-#contact {
-  background-color: white;
-  max-width: 800px;
-  margin: 0 auto;
+/* Fullscreen background */
+.contact-container {
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* Contact card styling */
+.contact {
+  background-color: #ffffff;
+  max-width: 600px;
+  width: 100%;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-#contact h2 {
+/* Header */
+.contact h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  color: #0a66c2;
 }
 
+/* Form layout */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 100%;
-  max-width: 500px;
 }
 
+/* Inputs and textarea */
 .contact-form input,
 .contact-form textarea {
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
 }
 
+/* Focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0a66c2;
+  outline: none;
+}
+
+/* Button styles */
 .contact-form button {
-  padding: 0.8rem;
-  background-color: #3498db;
-  color: white;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #0a66c2;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 .contact-form button:hover {
-  background-color: #2c3e50;
+  background-color: #084c9d;
 }
 
+/* Error messages */
 .error {
   color: red;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  text-align: left;
+  margin-top: -0.5rem;
+  margin-left: 0.5rem;
 }
